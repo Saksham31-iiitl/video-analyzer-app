@@ -1,0 +1,29 @@
+services:
+  # Backend - Docker Web Service
+  - type: web
+    name: video-analyzer-backend
+    runtime: docker
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: ALLOWED_ORIGINS
+        value: https://video-analyzer-frontend.onrender.com
+      # Add any other env vars your backend needs (API keys, etc.)
+      # - key: OPENAI_API_KEY
+      #   sync: false  # means Render will prompt you to enter it manually
+
+  # Frontend - Static Site
+  - type: web
+    name: video-analyzer-frontend
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://video-analyzer-backend.onrender.com
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=0, must-revalidate

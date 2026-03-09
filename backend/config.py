@@ -21,11 +21,14 @@ class Settings(BaseSettings):
     MUSIC_DIR: str = str(BASE_DIR / "music")
 
     # ── CORS ─────────────────────────────────────────────────────────
+    # Override via ALLOWED_ORIGINS env var (comma-separated URLs)
+    # e.g. ALLOWED_ORIGINS=https://my-frontend.onrender.com,http://localhost:5173
     CORS_ORIGINS: List[str] = [
-        "http://localhost:5173",   # Vite dev server
-        "http://localhost:3000",   # CRA / Next
-        "http://127.0.0.1:5173",
-        "http://127.0.0.1:3000",
+        o.strip()
+        for o in os.getenv(
+            "ALLOWED_ORIGINS",
+            "http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173,http://127.0.0.1:3000",
+        ).split(",")
     ]
 
     # ── Video defaults ───────────────────────────────────────────────

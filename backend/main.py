@@ -45,7 +45,6 @@ app.include_router(analyze.router, prefix="/api", tags=["analyze"])
 app.include_router(generate.router, prefix="/api", tags=["generate"])
 app.include_router(status.router, prefix="/api", tags=["status"])
 
-import os
 os.makedirs("output", exist_ok=True)
 app.mount("/output", StaticFiles(directory="output"), name="output")
 
