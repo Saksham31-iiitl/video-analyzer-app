@@ -16,6 +16,8 @@ AI-powered short reel generator from raw video clips — FastAPI backend + React
 ### Setup
 
 ```bash
+cd backend
+
 # Create virtual environment
 python -m venv venv
 
@@ -38,6 +40,7 @@ cp .env.example .env
 ### Run the Server
 
 ```bash
+cd backend
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
@@ -54,6 +57,7 @@ API docs available at: http://localhost:8000/docs
 ### Setup
 
 ```bash
+cd frontend
 npm install
 npm run dev
 ```
@@ -65,20 +69,34 @@ The app opens at **http://localhost:5173**.
 ## Project Structure
 
 ```
-backend/
-├── main.py                 # FastAPI entry point
-├── config.py               # Settings
-├── api/routes/             # API endpoints
-├── core/                   # Processing pipeline
-├── ai/                     # AI models
-├── utils/                  # Helpers
-├── presets/                # Style configurations
-└── tests/                  # Test suite
+├── frontend/                # React + Vite frontend
+│   ├── index.html           # HTML entry point
+│   ├── package.json         # Node.js dependencies
+│   ├── vite.config.js       # Vite build config
+│   ├── tailwind.config.js   # Tailwind CSS config
+│   └── src/
+│       ├── App.jsx          # Main React component
+│       ├── api/             # API client
+│       ├── pages/           # Page components
+│       ├── components/      # Reusable components
+│       └── hooks/           # Custom React hooks
+│
+├── backend/                 # FastAPI backend
+│   ├── main.py              # FastAPI entry point
+│   ├── config.py            # Settings
+│   ├── requirements.txt     # Python dependencies
+│   ├── api/routes/          # API endpoints
+│   ├── core/                # Processing pipeline
+│   ├── ai/                  # AI models
+│   ├── utils/               # Helpers
+│   ├── presets/             # Style configurations
+│   └── tests/               # Test suite
 ```
 
 ## GPU Support
 
 If you have an NVIDIA GPU, install PyTorch with CUDA:
 ```bash
+cd backend
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 ```
