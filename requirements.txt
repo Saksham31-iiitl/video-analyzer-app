@@ -1,0 +1,28 @@
+# ── Web Framework ────────────────────────────────────────────────────
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.9
+pydantic-settings==2.5.2
+
+# ── Video / Audio Processing ─────────────────────────────────────────
+moviepy==1.0.3
+scenedetect[opencv]==0.6.4
+opencv-python-headless==4.10.0.84
+librosa==0.10.2
+soundfile==0.12.1
+Pillow==10.4.0
+
+# ── AI / ML ──────────────────────────────────────────────────────────
+torch>=2.0.0
+torchvision>=0.15.0
+# Install CLIP separately: pip install git+https://github.com/openai/CLIP.git
+openai-whisper==20231117
+mediapipe==0.10.32
+deepface==0.0.93
+scikit-learn>=1.4.0
+
+# ── Utilities ────────────────────────────────────────────────────────
+numpy>=1.24.0
+aiofiles==24.1.0
+python-dotenv==1.0.1
+tqdm==4.66.5

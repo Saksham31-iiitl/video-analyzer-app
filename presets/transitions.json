@@ -1,0 +1,20 @@
+{
+  "cut": {
+    "name": "Hard Cut",
+    "description": "Instant switch between clips. Clean and punchy.",
+    "padding": 0,
+    "method": "compose"
+  },
+  "crossfade": {
+    "name": "Crossfade",
+    "description": "Smooth dissolve between clips.",
+    "padding": -0.3,
+    "method": "compose"
+  },
+  "zoom": {
+    "name": "Zoom Cut",
+    "description": "Slight zoom in at the cut point for energy.",
+    "zoom_factor": 1.05,
+    "duration": 0.15
+  }
+}

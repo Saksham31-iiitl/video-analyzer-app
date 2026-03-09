@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+venv312/
+env/
+
+# Large binary/archive files
+*.tar.gz
+*.zip
+*.whl
+
+# Project directories (generated at runtime)
+uploads/
+temp/
+output/
+cache/
+
+# Environment
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test data (optional — add your own)
+test_data/

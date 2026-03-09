@@ -1,0 +1,77 @@
+{
+  "fast_cuts": {
+    "name": "Fast Cuts",
+    "description": "Quick, energetic cuts synced to beats. Great for travel, gym, and party content.",
+    "avg_clip_duration": 1.5,
+    "transition": "cut",
+    "beat_sync": true,
+    "color_grade": "high_contrast",
+    "weights": {
+      "motion": 0.35,
+      "sharpness": 0.15,
+      "clip_relevance": 0.25,
+      "audio_energy": 0.15,
+      "face": 0.10
+    }
+  },
+  "cinematic": {
+    "name": "Cinematic",
+    "description": "Smooth, longer shots with crossfades. Perfect for landscapes and cinematic vlogs.",
+    "avg_clip_duration": 4.0,
+    "transition": "crossfade",
+    "beat_sync": false,
+    "color_grade": "warm_film",
+    "weights": {
+      "motion": 0.15,
+      "sharpness": 0.30,
+      "clip_relevance": 0.35,
+      "audio_energy": 0.10,
+      "face": 0.10
+    }
+  },
+  "vlog_energy": {
+    "name": "Vlog Energy",
+    "description": "Medium-paced with emphasis on faces and expressions. Ideal for talking-head and daily vlogs.",
+    "avg_clip_duration": 2.5,
+    "transition": "cut",
+    "beat_sync": true,
+    "color_grade": "bright_vivid",
+    "weights": {
+      "motion": 0.15,
+      "sharpness": 0.15,
+      "clip_relevance": 0.25,
+      "audio_energy": 0.15,
+      "face": 0.30
+    }
+  },
+  "aesthetic": {
+    "name": "Aesthetic",
+    "description": "Slow, dreamy clips with crossfades. For café, sunset, cozy vibes.",
+    "avg_clip_duration": 3.5,
+    "transition": "crossfade",
+    "beat_sync": false,
+    "color_grade": "soft_pastel",
+    "weights": {
+      "motion": 0.10,
+      "sharpness": 0.25,
+      "clip_relevance": 0.40,
+      "audio_energy": 0.10,
+      "face": 0.15
+    }
+  },
+  "hype": {
+    "name": "Hype / Sports",
+    "description": "Ultra-fast cuts with heavy beat sync. For sports, fitness, and action content.",
+    "avg_clip_duration": 1.0,
+    "transition": "cut",
+    "beat_sync": true,
+    "color_grade": "high_contrast",
+    "weights": {
+      "motion": 0.40,
+      "sharpness": 0.10,
+      "clip_relevance": 0.20,
+      "audio_energy": 0.20,
+      "face": 0.10
+    }
+  }
+}
