@@ -16,10 +16,10 @@ env/
 *.whl
 
 # Project directories (generated at runtime)
-uploads/
-temp/
-output/
-cache/
+backend/uploads/
+backend/temp/
+backend/output/
+backend/cache/
 
 # Environment
 .env
@@ -37,6 +37,7 @@ Thumbs.db
 
 # Node
 node_modules/
+frontend/dist/
 
 # Test data (optional — add your own)
 test_data/
