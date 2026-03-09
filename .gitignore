@@ -23,6 +23,7 @@ cache/
 
 # Environment
 .env
+.env.local
 
 # IDE
 .idea/
@@ -33,6 +34,9 @@ cache/
 # OS
 .DS_Store
 Thumbs.db
+
+# Node
+node_modules/
 
 # Test data (optional — add your own)
 test_data/
